@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/reactBridgewebsite/static/css/main.b316cfe5.css",
+    "main.js": "/reactBridgewebsite/static/js/main.18473608.js",
+    "static/media/2.jpg": "/reactBridgewebsite/static/media/2.e0e7204550d8d3424e7a.jpg",
+    "static/media/1.jpg": "/reactBridgewebsite/static/media/1.4c757e295d48afa77098.jpg",
+    "static/media/4.jpg": "/reactBridgewebsite/static/media/4.91670fbe6ae5488854be.jpg",
+    "static/media/3.jpg": "/reactBridgewebsite/static/media/3.fe90336776a389d07a84.jpg",
+    "static/media/5.jpg": "/reactBridgewebsite/static/media/5.12172a5f628f72a055dd.jpg",
+    "static/media/ecare1.jpg": "/reactBridgewebsite/static/media/ecare1.b2a210b3f764c7293059.jpg",
+    "index.html": "/reactBridgewebsite/index.html",
+    "main.b316cfe5.css.map": "/reactBridgewebsite/static/css/main.b316cfe5.css.map",
+    "main.18473608.js.map": "/reactBridgewebsite/static/js/main.18473608.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b316cfe5.css",
+    "static/js/main.18473608.js"
+  ]
+}
