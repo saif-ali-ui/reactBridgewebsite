@@ -9,22 +9,27 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import TeamMenbers from './TeamMenbers';
 import Footer from './Footer';
+import Registration from './Registration';
+import Gallery from './Gallery';
 
 function App() {
 
   return (
     <div className="App">
       <Navbar />
-          
+
       <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/contactus' element={<ContactUs />} />
-      <Route path='/services' element={[<Services />, <Servicesb /> ]} />
-      <Route path='/team' element={<TeamMenbers/>} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/contactus' element={<ContactUs />} />
+        <Route path='/services' element={[<Services />, <Servicesb />]} />
+        <Route path='/team' element={<TeamMenbers />} />
+        <Route path='/register' element={<Registration />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/about-bridge' element={<AboutBridgeCare />} />
       </Routes>
 
-      <Footer />
-      
+
+
     </div>
   );
 }

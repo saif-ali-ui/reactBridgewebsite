@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
 
-          <img className="navbar-brand img-fluid" style={{ width: '12%' }} src='	https://bridgecare.bridgeconnect.pk/wp-content/uploads/2022/03/bridge-LOGO2-removebg-preview.png' alt='img'/>
+          <img className="navbar-brand img-fluid" style={{ width: '12%' }} src='	https://bridgecare.bridgeconnect.pk/wp-content/uploads/2022/03/bridge-LOGO2-removebg-preview.png' alt='img' />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -30,6 +30,7 @@ const Navbar = () => {
                   About Us
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><Link to='/about-bridge' className="dropdown-item ">About Bridge </Link></li>
                   <li><a className="dropdown-item " href="#">FAQS </a></li>
                   <li><a className="dropdown-item" href="#">TERMS & CONDITION</a></li>
 
@@ -37,7 +38,7 @@ const Navbar = () => {
                 </ul>
               </li>
 
-              <li className="nav-item nav-items"> 
+              <li className="nav-item nav-items">
                 <Link to='/contactus' className="nav-link active" aria-current="page"> Contact</Link>
               </li>
 
@@ -45,19 +46,26 @@ const Navbar = () => {
                 <Link to='/team' className="nav-link active" aria-current="page"> Team Members</Link>
               </li>
 
+              <li className="nav-item nav-items">
+                <Link to='/gallery' className="nav-link active" aria-current="page"> Gallery</Link>
+              </li>
 
 
             </ul>
 
-            <Button
 
-              variant="contained"
-              color="primary"
-              style={{ paddingLeft: '10px', backgroundColor: '#00bcd4' }}
-              startIcon={<AddCircleOutlineIcon />}
-            >
-              Registration
-            </Button>
+
+            <Link to='/register'>
+              <Button
+
+                variant="contained"
+                color="primary"
+                style={{ paddingLeft: '10px', backgroundColor: '#00bcd4' }}
+                startIcon={<AddCircleOutlineIcon />}
+              >
+                Registration
+              </Button>
+            </Link>
 
           </div>
         </div>

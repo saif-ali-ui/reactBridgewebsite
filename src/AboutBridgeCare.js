@@ -26,7 +26,7 @@ const AboutBridgeCare = () => {
                     </div>
                 </div>
 
-                <div className='row mt-5'>
+                <div className='row mt-5 mb-5'>
                     <div className='col-lg-4 d-flex'>
                         <AboutCard />
                     </div>
