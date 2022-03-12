@@ -1,6 +1,5 @@
 import './App.css';
 import Services from './Services';
-import Slider from './Slider';
 import Navbar from './Navbar';
 import AboutBridgeCare from './AboutBridgeCare'
 import Servicesb from './Servicesb';
@@ -8,16 +7,16 @@ import ContactUs from './ContactUs';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import TeamMenbers from './TeamMenbers';
-import Footer from './Footer';
+
 import Registration from './Registration';
 import Gallery from './Gallery';
+import WeOffers from './WeOffers';
 
 function App() {
 
   return (
     <div className="App">
       <Navbar />
-
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/contactus' element={<ContactUs />} />
@@ -26,10 +25,9 @@ function App() {
         <Route path='/register' element={<Registration />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/about-bridge' element={<AboutBridgeCare />} />
+        <Route path='/offers' element={<WeOffers />} />
+        
       </Routes>
-
-
-
     </div>
   );
 }

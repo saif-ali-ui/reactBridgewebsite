@@ -1,6 +1,7 @@
 import React from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import { Button } from '@material-ui/core';
+import TextField from '@mui/material/TextField';
 
 const ContactUs = () => {
     return (
@@ -19,14 +20,41 @@ const ContactUs = () => {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="form-group form-primary"> <input type="text" name="email" className="form-control text-left" placeholder="Name" required="" /> </div>
+                                    <div className="col-md-6 mt-3 mb-3">
+
+                                        <TextField
+                                            fullWidth
+                                            // error
+                                            label="Name"
+                                            id="outlined-size-small"
+                                            defaultValue=""
+                                            size="small"
+                                        />
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="form-group form-primary"> <input type="text" name="email" className="form-control text-left" placeholder="Email" required="" /> </div>
+                                    <div className="col-md-6 mt-3 mb-3">
+                                        <TextField
+                                            fullWidth
+                                            // error
+                                            label="Email"
+                                            id="outlined-size-small"
+                                            defaultValue=""
+                                            size="small"
+                                        />
+                                        
+                                    </div>
+                                    <div className="col-md-12 mt-3 mb-3">
+                                        <TextField
+                                            fullWidth
+                                            // error
+                                            label="Message"
+                                            id="outlined-size-small"
+                                            defaultValue=""
+                                            size="small"
+                                        />
+                                        
                                     </div>
                                 </div>
-                                <div className="form-group form-primary"> <input type="text" name="email" className="form-control text-left" placeholder="Message" required="" /> </div>
+                                
                                 <div className="row">
                                     <div className="col-md-12">
 
