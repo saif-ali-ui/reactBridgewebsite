@@ -16,7 +16,7 @@ import ecareimg from './images/imgs/ecare1.jpg';
 const useStyles = makeStyles({
     root: {
         maxWidth: 370,
-        backgroundColor: '#d1f3f7',
+        backgroundColor: '#ffff',
         boxShadow: '0 0 10px rgb(0 0 0 / 20%)'
     },
     media: {

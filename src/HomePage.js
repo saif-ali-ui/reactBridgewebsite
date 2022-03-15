@@ -13,8 +13,8 @@ const HomePage = () => {
       <Services />
       <AboutBridgeCare />
       <Servicesb />
-      <ContactUs />
       <TeamMenbers />
+      <ContactUs />
     </div>
   )
 }

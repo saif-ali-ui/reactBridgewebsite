@@ -1,52 +1,23 @@
 import React from 'react'
+import GalleryObj from './GalleryObj';
 
 const Gallery = () => {
     return (
         <div className='container'>
-            <h1 className='heading'> Management & Operation Division </h1>
+            <h1 className='heading'> Gallery </h1>
             <div className="row">
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="box"> <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        <div className="content">
-                            <img alt='img' src="https://imgur.com/hhy6ZAM.jpg" />
-                        </div>
-                    </div>
-                </div>
+                {
+                    GalleryObj.map((data) => {
+                        let {id, image} = data;
+                        return (
+                            <div className="col-lg-3" key={id}>
+                                <div className="box">
+                                    <img alt='img' src={image}/>
+                                </div>
+                            </div>
+                        );
+                    })
+                }
             </div>
         </div>
     );

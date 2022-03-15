@@ -27,8 +27,6 @@ const ExpandMore = styled((props) => {
 }));
 
 
-
-
 const Blogs = () => {
 
     const [expanded, setExpanded] = React.useState(false);
@@ -39,7 +37,7 @@ const Blogs = () => {
 
     return (
         <div className='container'>
-            <h1 className='heading'> Management & Operation Division </h1>
+            <h1 className='heading'> Blogs </h1>
 
             <div className="row">
                 {
@@ -51,13 +49,13 @@ const Blogs = () => {
 
                                     <CardMedia
                                         component="img"
-                                        height="400"
+                                        height="350"
                                         image={image}
                                         alt="blog-img"
                                     />
                                     <CardContent>
                                         <Typography variant="body2" color="text.secondary">
-                                            <h2>{heading}</h2>
+                                            <h5>{heading}</h5>
                                         </Typography>
                                     </CardContent>
                                     <CardActions disableSpacing>
@@ -76,10 +74,7 @@ const Blogs = () => {
                                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                                         <CardContent>
                                             <Typography paragraph>{heading} </Typography>
-
                                             <Typography paragraph>{description}</Typography>
-
-
                                         </CardContent>
                                     </Collapse>
                                 </Card>

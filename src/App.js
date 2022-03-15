@@ -13,6 +13,7 @@ import Gallery from './Gallery';
 import WeOffers from './WeOffers';
 import OurPartners from './OurPartners';
 import Blogs from './Blogs';
+import TermsCondition from './TermsCondition';
 
 function App() {
 
@@ -29,8 +30,9 @@ function App() {
         <Route path='/about-bridge' element={<AboutBridgeCare />} />
         <Route path='/offers' element={<WeOffers />} />
         <Route path='/partners' element={<OurPartners />} />
-      </Routes>
-      <Blogs />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/terms' element={<TermsCondition />} />
+      </Routes>   
     </div>
   );
 }
