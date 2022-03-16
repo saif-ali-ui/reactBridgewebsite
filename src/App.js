@@ -14,6 +14,7 @@ import WeOffers from './WeOffers';
 import OurPartners from './OurPartners';
 import Blogs from './Blogs';
 import TermsCondition from './TermsCondition';
+import Help from './Help';
 
 function App() {
 
@@ -32,7 +33,9 @@ function App() {
         <Route path='/partners' element={<OurPartners />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/terms' element={<TermsCondition />} />
-      </Routes>   
+        <Route path='/help' element={<Help />} />
+      </Routes> 
+ 
     </div>
   );
 }
