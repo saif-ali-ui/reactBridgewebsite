@@ -10,7 +10,7 @@ const Gallery = () => {
                     GalleryObj.map((data) => {
                         let {id, image} = data;
                         return (
-                            <div className="col-lg-3" key={id}>
+                            <div className="col-lg-4" key={id}>
                                 <div className="box">
                                     <img alt='img' src={image}/>
                                 </div>
