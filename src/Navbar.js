@@ -31,7 +31,8 @@ const Navbar = () => {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><Link to='/about-bridge' className="dropdown-item ">About Bridge </Link></li>
                   <li><Link to='/blogs' className="dropdown-item "> Blogs </Link></li>
-                  <li><Link to='/terms' className="dropdown-item" href="#">TERMS & CONDITION</Link></li>
+                  <li><Link to='/terms' className="dropdown-item" >TERMS & CONDITION</Link></li>
+                  <li><Link to='/offers' className="dropdown-item" >We Offer </Link></li>
 
                   <li><Link to='/help' className="dropdown-item">HELP</Link></li>
                 </ul>
@@ -47,10 +48,6 @@ const Navbar = () => {
 
               <li className="nav-item nav-items">
                 <Link to='/gallery' className="nav-link active" aria-current="page"> Gallery</Link>
-              </li>
-
-              <li className="nav-item nav-items">
-                <Link to='/offers' className='nav-link active' aria-current="page"> We Offer </Link>
               </li>
 
               <li className="nav-item nav-items">

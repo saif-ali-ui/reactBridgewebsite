@@ -17,6 +17,7 @@ import FormLabel from '@mui/material/FormLabel';
 import PropTypes from 'prop-types';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
+import { useState } from 'react';
 
 
 const StyledFormControlLabel = styled((props) => <FormControlLabel {...props} />)(
@@ -54,6 +55,55 @@ const Registration = () => {
     const captchaChange = () => {
         console.log("saif Ali");
     }
+
+    const [pmdc, setPmdc] = useState('');
+    const [fname, setFName] = useState('');
+    const [lname, setLName] = useState('');
+    const [email, setEmail] = useState('');
+    const [number, setNumber] = useState('');
+    const [rDoctor, setRDoctor] = useState('');
+    const [pDesc, setPDesc] = useState('');
+
+    
+
+
+    const textPmdc = (event) => {
+        setPmdc(event.target.value);    
+    }
+    const textFname = (event) => { 
+        setFName(event.target.value);
+    }
+
+    const textLname = (event) => { 
+        setLName(event.target.value);
+    }
+
+    const textEmail = (event) => { 
+        setEmail(event.target.value);
+    }
+    const textNumber = (event) => { 
+        setNumber(event.target.value);
+    }
+    const textRDoctor = (event) => { 
+        setRDoctor(event.target.value);
+    }
+    const textPDesc = (event) => { 
+        setPDesc(event.target.value);
+    }
+   
+
+    const btnClick = () => {
+        console.log(pmdc);
+        console.log(fname);
+        console.log(lname);
+        console.log(email);
+        console.log(number);
+        console.log(rDoctor);
+        console.log(pDesc);
+               
+    }
+
+    
     return (
         <div className='container'>
             <h1 className='heading'> Registration</h1>
@@ -104,65 +154,79 @@ const Registration = () => {
                         <div className="col-md-12 mt-3 mb-3">
                             <TextField
                                 fullWidth
+                                value={pmdc}
                                 label="PMDC No"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textPmdc}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3">
                             <TextField
                                 fullWidth
+                                value={fname}
                                 label="First Name"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textFname}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
+                                value={lname}
                                 label="Last Name"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textLname}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
+                                value={email}
                                 label="Email"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textEmail}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
+                                value={number}
                                 label="Number"
                                 type='number'
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textNumber}
                             />
                         </div>
                         <div className="col-md-12 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
+                                value={rDoctor}
                                 label="Are you eDoctor"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
+                                onChange={textRDoctor}
                             />
                         </div>
                         <div className="col-md-12 mt-md-0 mt-3 mb-3">
                             <TextField
+                                value={pDesc}
                                 id="outlined-multiline-static"
                                 label="Your Brief Profile"
                                 multiline
                                 fullWidth
                                 defaultValue=""
+                                onChange={textPDesc}
                             />
                         </div>
 
@@ -188,6 +252,7 @@ const Registration = () => {
                         color="primary"
                         style={{ paddingLeft: '10px', backgroundColor: '#00bcd4', marginLeft: '3px', marginRight: '3px', marginTop: '10px' }}
                         startIcon={<CheckCircleIcon />}
+                        onClick={btnClick}
                     >
                         Submit
                     </Button>
