@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/reactBridgewebsite' element={<HomePage />} />
         <Route path='/contactus' element={<ContactUs />} />
         <Route path='/services' element={[<Services />, <Servicesb />]} />
         <Route path='/team' element={<TeamMenbers />} />
