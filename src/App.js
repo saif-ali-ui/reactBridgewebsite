@@ -15,6 +15,7 @@ import OurPartners from './OurPartners';
 import Blogs from './Blogs';
 import TermsCondition from './TermsCondition';
 import Help from './Help';
+import OurAdvisors from './OurAdvisors';
 
 function App() {
 
@@ -34,8 +35,9 @@ function App() {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/terms' element={<TermsCondition />} />
         <Route path='/help' element={<Help />} />
-      </Routes> 
- 
+        <Route path='/advosors' element={<OurAdvisors />} />
+      </Routes>
+    
     </div>
   );
 }

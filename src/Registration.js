@@ -48,6 +48,7 @@ MyFormControlLabel.propTypes = {
 };
 
 const Registration = () => {
+    
     const Input = styled('input')({
         display: 'none',
     });
@@ -64,33 +65,33 @@ const Registration = () => {
     const [rDoctor, setRDoctor] = useState('');
     const [pDesc, setPDesc] = useState('');
 
-    
+
 
 
     const textPmdc = (event) => {
-        setPmdc(event.target.value);    
+        setPmdc(event.target.value);
     }
-    const textFname = (event) => { 
+    const textFname = (event) => {
         setFName(event.target.value);
     }
 
-    const textLname = (event) => { 
+    const textLname = (event) => {
         setLName(event.target.value);
     }
 
-    const textEmail = (event) => { 
+    const textEmail = (event) => {
         setEmail(event.target.value);
     }
-    const textNumber = (event) => { 
+    const textNumber = (event) => {
         setNumber(event.target.value);
     }
-    const textRDoctor = (event) => { 
+    const textRDoctor = (event) => {
         setRDoctor(event.target.value);
     }
-    const textPDesc = (event) => { 
+    const textPDesc = (event) => {
         setPDesc(event.target.value);
     }
-   
+
 
     const btnClick = () => {
         console.log(pmdc);
@@ -100,10 +101,10 @@ const Registration = () => {
         console.log(number);
         console.log(rDoctor);
         console.log(pDesc);
-               
+
     }
 
-    
+
     return (
         <div className='container'>
             <h1 className='heading'> Registration</h1>
@@ -157,7 +158,7 @@ const Registration = () => {
                                 value={pmdc}
                                 label="PMDC No"
                                 id="outlined-size-small"
-                                defaultValue=""
+                                defaultValue="unkonown"
                                 size="small"
                                 onChange={textPmdc}
                             />
@@ -168,7 +169,7 @@ const Registration = () => {
                                 value={fname}
                                 label="First Name"
                                 id="outlined-size-small"
-                                defaultValue=""
+                                defaultValue="unkonown"
                                 size="small"
                                 onChange={textFname}
                             />
@@ -379,7 +380,9 @@ const Registration = () => {
                     </Button>
                 </div>
             </div>
+             
         </div>
+        
 
 
     )
