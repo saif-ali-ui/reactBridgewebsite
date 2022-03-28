@@ -890,13 +890,13 @@ a:link {
 }
 
 .name {
-    font-size: 15px;
+    font-size: 16px;
     color: #b7b7b7;
     font-weight: 600
 }
 
 .mail {
-    font-size: 8px;
+    font-size: 16px;
     font-weight: 500;
     color: #5a5d64
 }
@@ -914,9 +914,9 @@ a:link {
 }
 
 .details {
-    font-size: 8px;
+    font-size: 14px;
     font-weight: 500;
-    color: #0606b5
+    color: white
 }
 
 .right {
