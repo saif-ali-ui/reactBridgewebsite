@@ -26,7 +26,6 @@ const TeamMenbers = () => {
                                 </div>
                             </div>
                         );
-
                     })
                 }
             </div>

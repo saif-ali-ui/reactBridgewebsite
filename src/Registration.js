@@ -48,7 +48,7 @@ MyFormControlLabel.propTypes = {
 };
 
 const Registration = () => {
-    
+
     const Input = styled('input')({
         display: 'none',
     });
@@ -57,50 +57,57 @@ const Registration = () => {
         console.log("saif Ali");
     }
 
-    const [pmdc, setPmdc] = useState('');
-    const [fname, setFName] = useState('');
-    const [lname, setLName] = useState('');
-    const [email, setEmail] = useState('');
-    const [number, setNumber] = useState('');
-    const [rDoctor, setRDoctor] = useState('');
-    const [pDesc, setPDesc] = useState('');
+    const [userReg, setUserReg] = useState({
+        fname: "",
+        lname: "",
+        pmdc: 0,
+        email: "",
+        number: 0,
+        desc: ""
+    });
 
-
-
-
-    const textPmdc = (event) => {
-        setPmdc(event.target.value);
-    }
-    const textFname = (event) => {
-        setFName(event.target.value);
+    let name, value;
+    const getUserData = (event) => {
+        name = event.target.name;
+        value = event.target.value;
+        setUserReg({ ...userReg, [name]: value })
     }
 
-    const textLname = (event) => {
-        setLName(event.target.value);
-    }
+    const postData = async (e) => {
+        e.preventDefault();
 
-    const textEmail = (event) => {
-        setEmail(event.target.value);
-    }
-    const textNumber = (event) => {
-        setNumber(event.target.value);
-    }
-    const textRDoctor = (event) => {
-        setRDoctor(event.target.value);
-    }
-    const textPDesc = (event) => {
-        setPDesc(event.target.value);
-    }
+        const {fname,lname,pmdc,email,number,desc }= userReg;
+        const response = await fetch("https://reactbridgeweb-default-rtdb.firebaseio.com/bridgeuserdataform.json",
+            {
+                method: "POST",
+                Headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    fname,
+                    lname,
+                    pmdc,
+                    email,
+                    number,
+                    desc
+                }),
+            }
+        );
+        if(response){
+            setUserReg({
+                fname: "",
+                lname: "",
+                pmdc: 0,
+                email: "",
+                number: 0,
+                desc: ""
+            });
+            alert("Yourform submitted")
 
-
-    const btnClick = () => {
-        console.log(pmdc);
-        console.log(fname);
-        console.log(lname);
-        console.log(email);
-        console.log(number);
-        console.log(rDoctor);
-        console.log(pDesc);
+        }
+        else{
+            alert("your form is not submitted")
+        }
 
     }
 
@@ -150,84 +157,80 @@ const Registration = () => {
             <div className="wrapper rounded bg-white">
 
                 <div className="h3">Registration Form</div>
-                <div className="form">
+                <form className="form" method="POST">
                     <div className="row">
                         <div className="col-md-12 mt-3 mb-3">
                             <TextField
                                 fullWidth
-                                value={pmdc}
+                                name='pmdc'
+                                value={userReg.pmdc}
                                 label="PMDC No"
+                                type='number'
                                 id="outlined-size-small"
                                 defaultValue="unkonown"
                                 size="small"
-                                onChange={textPmdc}
+                                onChange={getUserData}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3">
                             <TextField
                                 fullWidth
-                                value={fname}
+                                name='fname'
+                                value={userReg.fname}
                                 label="First Name"
                                 id="outlined-size-small"
                                 defaultValue="unkonown"
                                 size="small"
-                                onChange={textFname}
+                                onChange={getUserData}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
-                                value={lname}
+                                name='lname'
+                                value={userReg.lname}
                                 label="Last Name"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
-                                onChange={textLname}
+                                onChange={getUserData}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
-                                value={email}
+                                name='email'
+                                value={userReg.email}
                                 label="Email"
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
-                                onChange={textEmail}
+                                onChange={getUserData}
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3 mb-3">
                             <TextField
                                 fullWidth
-                                value={number}
+                                name='number'
+                                value={userReg.number}
                                 label="Number"
                                 type='number'
                                 id="outlined-size-small"
                                 defaultValue=""
                                 size="small"
-                                onChange={textNumber}
+                                onChange={getUserData}
                             />
                         </div>
                         <div className="col-md-12 mt-md-0 mt-3 mb-3">
                             <TextField
-                                fullWidth
-                                value={rDoctor}
-                                label="Are you eDoctor"
-                                id="outlined-size-small"
-                                defaultValue=""
-                                size="small"
-                                onChange={textRDoctor}
-                            />
-                        </div>
-                        <div className="col-md-12 mt-md-0 mt-3 mb-3">
-                            <TextField
-                                value={pDesc}
+                                name='desc'
+                                value={userReg.desc}
                                 id="outlined-multiline-static"
                                 label="Your Brief Profile"
                                 multiline
                                 fullWidth
                                 defaultValue=""
-                                onChange={textPDesc}
+                                onChange={getUserData}
                             />
                         </div>
 
@@ -249,15 +252,17 @@ const Registration = () => {
                     />
 
                     <Button
+                        type='submit'
                         variant="contained"
                         color="primary"
                         style={{ paddingLeft: '10px', backgroundColor: '#00bcd4', marginLeft: '3px', marginRight: '3px', marginTop: '10px' }}
                         startIcon={<CheckCircleIcon />}
-                        onClick={btnClick}
+                        onClick={postData}
+
                     >
                         Submit
                     </Button>
-                </div>
+                </form>
             </div>
 
 
@@ -380,9 +385,9 @@ const Registration = () => {
                     </Button>
                 </div>
             </div>
-             
+
         </div>
-        
+
 
 
     )
