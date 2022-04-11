@@ -47,7 +47,7 @@ const TeamMemberObj = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
 
     },    {
-        id: 1,
+        id: 7,
         image: "https://bridgeconnect.pk/wp-content/uploads/2021/10/Ms-Momina-large-240x300.jpg",
         name: "Ms. Momina Sohail",
         designation: "Co-founder & CEO- BRIDGE",

@@ -44,7 +44,7 @@ const Blogs = () => {
                     BlogsData.map((data) => {
                         let { id, image, heading, description } = data;
                         return (
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" key={id}>
                                 <Card sx={{ maxWidth: 400 }}>
 
                                     <CardMedia

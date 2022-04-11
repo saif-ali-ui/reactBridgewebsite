@@ -16,6 +16,7 @@ import Blogs from './Blogs';
 import TermsCondition from './TermsCondition';
 import Help from './Help';
 import OurAdvisors from './OurAdvisors';
+import PageNotF from './PageNotF';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/terms' element={<TermsCondition />} />
         <Route path='/help' element={<Help />} />
         <Route path='/advosors' element={<OurAdvisors />} />
+        <Route component={<PageNotF />} />
       </Routes>
     
     </div>

@@ -11,7 +11,7 @@ const TeamMenbers = () => {
                         let { id, name, image, description, designation } = members;
                         console.log(id);
                         return (
-                            <div className="col-lg-3">
+                            <div className="col-lg-3" key={id}>
                                 <div className="cardd">
                                     <div className="card-body text-center"> <img src={image} className="rounded-circle" width="200" height="200" />
                                         <h5 className="card-title mt-2 mb-1"> {name} </h5> <span className="fs-2 mb-3 font-weight-bold">{designation}</span>

@@ -76,38 +76,46 @@ const Registration = () => {
     const postData = async (e) => {
         e.preventDefault();
 
-        const {fname,lname,pmdc,email,number,desc }= userReg;
-        const response = await fetch("https://reactbridgeweb-default-rtdb.firebaseio.com/bridgeuserdataform.json",
-            {
-                method: "POST",
-                Headers: {
-                    "content-type": "application/json",
-                },
-                body: JSON.stringify({
-                    fname,
-                    lname,
-                    pmdc,
-                    email,
-                    number,
-                    desc
-                }),
-            }
-        );
-        if(response){
-            setUserReg({
-                fname: "",
-                lname: "",
-                pmdc: 0,
-                email: "",
-                number: 0,
-                desc: ""
-            });
-            alert("Yourform submitted")
+        const { fname, lname, pmdc, email, number, desc } = userReg;
 
+        if (fname && lname && pmdc && email && number && desc) {
+            const response = await fetch("https://reactbridgeweb-default-rtdb.firebaseio.com/bridgeuserdataform.json",
+                {
+                    method: "POST",
+                    Headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        fname,
+                        lname,
+                        pmdc,
+                        email,
+                        number,
+                        desc
+                    }),
+                }
+            );
+            if (response) {
+                setUserReg({
+                    fname: "",
+                    lname: "",
+                    pmdc: 0,
+                    email: "",
+                    number: 0,
+                    desc: ""
+                });
+                alert("Yourform submitted")
+
+            }
+            else {
+                alert("your form is not submitted")
+            }
         }
-        else{
-            alert("your form is not submitted")
+        else {
+            alert("Please Fill the All The Data")
         }
+
+
 
     }
 
@@ -170,6 +178,7 @@ const Registration = () => {
                                 defaultValue="unkonown"
                                 size="small"
                                 onChange={getUserData}
+                                required
                             />
                         </div>
                         <div className="col-md-6 mt-md-0 mt-3">
